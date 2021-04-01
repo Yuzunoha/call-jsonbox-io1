@@ -1,7 +1,9 @@
 'use strict';
 
-const url = 'https://jsonbox.io/box_1cb3264389eb29ba6a93';
 const btnRead = document.getElementById('btnRead');
+const btnWrite = document.getElementById('btnWrite');
+const inputWrite = document.getElementById('inputWrite');
+const url = 'https://jsonbox.io/box_1cb3264389eb29ba6a93';
 const p = console.log;
 
 const onClickBtnRead = () => {
@@ -11,4 +13,10 @@ const onClickBtnRead = () => {
     .then(p);
 };
 
+const onClickBtnWrite = () => {
+  const text = inputWrite.value;
+  p(text);
+};
+
 btnRead.onclick = onClickBtnRead;
+btnWrite.onclick = onClickBtnWrite;
